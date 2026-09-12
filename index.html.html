@@ -57,6 +57,12 @@
             gap: 10px;
         }
         
+        .logo-img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+        }
+        
         .logo-text {
             color: var(--green);
             font-size: 23px;
@@ -208,11 +214,12 @@
             background: linear-gradient(135deg, #dfe9f3, #9eb5c9);
             box-shadow: 20px 25px 55px rgba(0, 0, 0, 0.18);
             transform: rotate(1.5deg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 18px;
+        }
+        
+        .building-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         /* BUILDING TYPES SECTION */
@@ -312,6 +319,13 @@
             text-align: center;
             color: #37516c;
             font-weight: bold;
+            overflow: hidden;
+        }
+        
+        .photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .about-content h2 {
@@ -540,6 +554,7 @@
 <!-- NAVBAR -->
 <nav class="navbar">
     <div class="brand">
+        <img src="geokore-logo.png.jpg" alt="Geokore Logo" class="logo-img">
         <div class="logo-text">
             Geo<span style="color: var(--blue);">Core</span>
             <small>CONSULTANCY</small>
@@ -570,7 +585,7 @@
     
     <div class="hero-visual">
         <div class="building-placeholder">
-            📐 Building Visualization
+            <img src="Foundation.jpg" alt="Building Foundation">
         </div>
     </div>
 </section>
@@ -627,7 +642,7 @@
     <div class="about">
         <div class="about-visual">
             <div class="photo-placeholder">
-                🏗️ Our Team Photo
+                <img src="setting_out.jpg" alt="Project Setting Out">
             </div>
         </div>
         <div class="about-content">
@@ -683,43 +698,34 @@
     <div class="project-grid">
         <div class="project">
             <div class="project-image">
-                <div class="project-placeholder">
-                    <div class="big-icon">🏢</div>
-                    Project 1 Image
-                </div>
+                <img src="Foundation.jpg" alt="Foundation Project">
             </div>
             <div class="project-info">
                 <span>COMMERCIAL</span>
-                <h3>Downtown Business Complex</h3>
-                <p>A modern 10-story commercial complex in Lagos completed on schedule.</p>
+                <h3>Foundation Work</h3>
+                <p>Professional foundation construction ensuring structural integrity and durability.</p>
             </div>
         </div>
         
         <div class="project">
             <div class="project-image">
-                <div class="project-placeholder">
-                    <div class="big-icon">🏠</div>
-                    Project 2 Image
-                </div>
+                <img src="new project.jpg" alt="New Project">
             </div>
             <div class="project-info">
                 <span>RESIDENTIAL</span>
-                <h3>Luxury Apartments</h3>
-                <p>50-unit luxury residential development with premium finishes.</p>
+                <h3>New Project Development</h3>
+                <p>Complete project execution from planning to delivery with quality assurance.</p>
             </div>
         </div>
         
         <div class="project">
             <div class="project-image">
-                <div class="project-placeholder">
-                    <div class="big-icon">🏥</div>
-                    Project 3 Image
-                </div>
+                <img src="Floor plan.jpg" alt="Floor Plan">
             </div>
             <div class="project-info">
-                <span>HEALTHCARE</span>
-                <h3>Medical Facility</h3>
-                <p>State-of-the-art health center designed to international standards.</p>
+                <span>ARCHITECTURE</span>
+                <h3>Advanced Floor Planning</h3>
+                <p>Detailed floor plans and architectural designs for optimal space utilization.</p>
             </div>
         </div>
     </div>
