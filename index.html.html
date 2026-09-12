@@ -547,6 +547,100 @@
         .contact {
             background: #f5f8fc;
         }
+
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e4eaf1;
+            border-radius: 7px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: var(--dark);
+            transition: 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(22, 139, 53, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(100deg, var(--green), var(--blue));
+            color: white;
+            padding: 14px 40px;
+            border: none;
+            border-radius: 7px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(20, 88, 184, 0.25);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contact-info-item {
+            text-align: center;
+        }
+
+        .contact-info-item h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .contact-info-item p {
+            color: var(--text);
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -779,11 +873,61 @@
         <h2>Contact <span>Us</span></h2>
         <p>We'd love to hear about your project. Reach out to our team for a consultation.</p>
     </div>
-    
-    <div style="text-align: center; padding: 40px;">
-        <p style="font-size: 18px; margin: 10px 0;">📞 Phone: +234 800 000 0000</p>
-        <p style="font-size: 18px; margin: 10px 0;">✉️ Email: info@geokore.com</p>
-        <p style="font-size: 18px; margin: 10px 0;">📍 Location: Lagos, Nigeria</p>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+        <form name="contactForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Type *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option value="Architectural Design">Architectural Design</option>
+                        <option value="Building Supervision">Building Supervision</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="project">Describe Your Project *</label>
+                <textarea id="project" name="project" required placeholder="Tell us about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+        <div class="contact-info-item">
+            <h3>📞 Phone</h3>
+            <p>+234 800 000 0000</p>
+        </div>
+        <div class="contact-info-item">
+            <h3>✉️ Email</h3>
+            <p>info@geokore.com</p>
+        </div>
+        <div class="contact-info-item">
+            <h3>📍 Location</h3>
+            <p>Lagos, Nigeria</p>
+        </div>
     </div>
 </section>
 
